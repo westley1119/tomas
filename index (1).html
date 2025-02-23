@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <title>Yes or No</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: absolute;
+        }
+        #yesBtn {
+            left: 40%;
+        }
+        #noBtn {
+            left: 55%;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>bakla ka ba guinid tomas?</h2>
+    
+    <div class="container">
+        <button id="yesBtn" onclick="sayYes()">Yes</button>
+        <button id="noBtn" onclick="moveNoButton()">No</button>
+    </div>
+
+    <script>
+        function sayYes() {
+            alert("so gayam mabakbaklaan ka kanyak hahaha bakla")
+        }
+        function moveNoButton() {
+            let noBtn = document.getElementById("noBtn");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
+  
